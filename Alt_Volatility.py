@@ -17,7 +17,7 @@ def rogers_satchell_volatility(data, periods):
     v1 = np.log(np.divide(highs, closes))
     v2 = np.log(np.divide(highs, opens))
     v3 = np.log(np.divide(lows, closes))
-    v4 = np.log(np.divide(lows, closes))
+    v4 = np.log(np.divide(lows, opens))
 
     return  np.sqrt(np.sum(np.add(np.multiply(v1,v2),np.multiply(v3,v4))) / periods)
 
